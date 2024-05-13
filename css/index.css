@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap");
+
+* {
+  font-family: Raleway, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  width: 1000px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Modificaciones para la navegación en la parte superior */
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%; /* Extensión completa */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparente para ver el fondo */
+  padding: 10px 0; /* Padding vertical */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center; /* Centrar  elementos del menú */
+}
+
+nav ul li {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 25%;
+  text-align: center;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 100;
+  width: 100%;
+  display: block;
+  padding: 10px 15px; /* Más espacio de clic */
+  font-weight: medium; /* Peso medio para los enlaces */
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover  */
+}
+
+/* SECCIÓN DE LA IMAGEN PRINCIPAL */
+
+#seccion-imagen-principal {
+  height: 65vh;
+  background-image: url("../images/fondodiferente.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /*  100% de la altura de la ventana */
+  color: white; /* Texto en color blanco  */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Sombra en el texto */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/* Título principal */
+#seccion-imagen-principal h1 {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+  font-size: 2.5rem; /* fuente grande */
+  font-weight: bold; /* fuente en negrita */
+  margin: 10px 0; /* Margen  */
+}
+/* Subtítulo */
+#seccion-imagen-principal h2 {
+  color: white;
+  text-shadow: 2px 2px 5px #000;
+  font-size: 1.2rem; /* tamaño mas chico titulo */
+  margin-bottom: 30px; /* espacio después del subtítulo */
+}
+
+.foto-perfil {
+  height: 100px;
+  width: 100px;
+  align-content: center;
+  border-radius: 50%; /* círculo completo */
+  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+  border: 3px solid white; /* borde blanco para  la foto */
+  margin-bottom: 20px; /* espacio antes del nombre */
+}
+
+/* SECCIONES */
+
+#seccion-resumen h2,
+#seccion-experiencia h2,
+#seccion-conocimientos h2 {
+  margin-top: 40px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.seccion-articulo {
+  width: 100%;
+}
+
+.seccion-articulo p {
+  text-align: justify;
+}
+
+.seccion-articulo p::first-letter {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#seccion-contenido {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+/* EXPERIENCIA */
+
+.lista-experiencia {
+  width: 100%; /*   llenar el contenedor */
+  max-width: 800px; /*  ancho máximo  */
+  margin: 30px auto;
+  background-color: white;
+  list-style: none;
+  margin: 0 auto; /* centrar la lista en la página */
+  padding: 20px; /* añade espacio interior */
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra a la lista */
+}
+/* Estilo de cada elemento de experiencia */
+.lista-experiencia .elemento-experiencia {
+  display: flex;
+  padding: 10px; /* espacio interior para cada elemento */
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0; /* línea divisoria  entre elementos */
+  margin-bottom: 20px; /* espacio entre elementos de experiencia */
+}
+
+.lista-experiencia .elemento-experiencia:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.lista-experiencia .imagen-experiencia {
+  flex-shrink: 0;
+  height: 80px;
+}
+/* Mejora visual de las imágenes de las empresas */
+.lista-experiencia .imagen-experiencia img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* sombra  */
+  margin-right: 15px; /* espacio entre la imagen y el texto */
+}
+
+.lista-experiencia .contenido-experiencia {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.lista-experiencia .contenido-experiencia h1 {
+  font-size: 18px; /* tamaño de fuente para el nombre de la empresa */
+  color: #34495e; /* color para el nombre de la empresa */
+  margin-bottom: 5px; /* espacio entre el nombre de la empresa y la descripción */
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.lista-experiencia .contenido-experiencia p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  color: #666; /* color  para el texto descriptivo */
+  line-height: 1.5; /* espaciado de línea  */
+}
+/* Estilos para la fecha y el título del puesto */
+.contenido-experiencia h6 {
+  font-size: 14px; /* tamaño mas chico para la fecha */
+  color: #999; /* gris  para la fecha y detalles */
+  margin-bottom: 5px; /* espacio antes de la descripción del trabajo */
+}
+.contenido-experiencia h5 {
+  font-size: 16px; /* tamaño para el título del puesto */
+  color: #333; /* color  */
+  font-weight: bold; /* negrita */
+}
+
+/* CONOCIMIENTOS */
+#seccion-conocimientos {
+  width: 100%;
+}
+.contenedor-conocimientos {
+  display: flex;
+  justify-content: space-around;
+}
+.tarjeta-conocimientos {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  width: 200px;
+  height: 100%; /*  misma altura para todas las tarjetas */
+  margin: 10px; /* espacio alrededor de cada tarjeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra  */
+  border: 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden; /* contenido dentro de los bordes redondeados */
+}
+
+/* Cuerpo de las tarjetas */
+.cuerpo-conocimientos {
+  flex-grow: 1; /*  todo el espacio disponible */
+  flex: 1 1 0;
+  margin: 5px;
+  color: #000000; /* color  */
+  padding: 15px; /* espaciado interno */
+  font-size: 14px; /* tamaño de fuente */
+  line-height: 1.5; /* espaciado de línea */
+}
+/* Título de las tarjetas */
+.titulo-conocimientos {
+  background-color: #000000;
+  display: flex;
+  font-size: 16px; /*  tamaño de fuente para los títulos */
+  padding: 10px 15px; /* espaciado interno */
+  font-weight: bold; /*  negrita para el título */
+  text-align: center; /* alineación del texto */
+  color: white;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+/* Pie de las tarjetas */
+.pie-conocimientos {
+  background-color: #74a0cc;
+  display: flex;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 10px; /* espaciado interno */
+  font-size: 14px;
+}
+.tarjeta-conocimientos:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.363); /* sombra al pasar el ratón */
+  transform: translateY(-5px); /* levanta la tarjeta al pasar el ratón */
+  transition: all 0.3s ease-in-out; /* transición  hover */
+}
+
+/* PIE DE PÁGINA CONTACTO */
+
+#pie-contacto {
+  background-color: #566573;
+  color: #eeeeee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  gap: 20px; /* espacio entre los elementos del footer */
+  padding: 20px 0; /*  más espacio a los elementos */
+  border-top: 2px solid #34495e; /* línea superior para definir el área del footer */
+  box-shadow: 0 -4px 6px rgba(26, 27, 34, 0.342); /*  sombra   */
+  align-items: stretch;
+}
+
+#pie-contacto .datos-contacto {
+  display: flex;
+  justify-content: space-between;
+  padding-top: px;
+}
+
+.contenedor-pie {
+  width: 80%;
+  padding: 0px 0px;
+  transition: transform 0.3s ease-in-out; /* transición para los hover  */
+}
+.contenedor-pie:hover {
+  transform: translateY(-5px); /* Levanta  el contenedor al pasar el ratón */
+}
+.informacion-contacto ul {
+  padding: 0;
+  list-style: none; /* elimina puntos  */
+}
+.informacion-contacto li {
+  margin-bottom: 15px;
+  color: #ffffff; /* color */
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  line-height: 1.6; /*  el espacio entre líneas  */
+}
+.informacion-contacto li b {
+  font-weight: bold; /* destaca las etiquetas  */
+  color: #ffffff; /* color etiquetas */
+}
+
+.informacion-contacto a {
+  color: #ffffff; /* color claro */
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1.6; /* espacio entre lineas */
+  transition: color 0.3s ease; /* trancsion */
+}
+
+.informacion-contacto a:hover {
+  color: #ffffff; /* color */
+  text-decoration: underline; /* subrayado al hover */
+}
+.contacto-mapa iframe {
+  border-radius: 5px; /* bordes redondeados  */
+  box-shadow: 0 4px 8px rgba(43, 41, 121, 0.993); /* Sombra  */
+  border: none; /* elimina el borde */
+}
+
+.formulario-contacto form {
+  margin-left: 50px;
+  text-align: left;
+}
+
+.formulario-contacto form .control-formulario {
+  padding: 10px 0;
+}
+
+.formulario-contacto form .control-formulario input,
+.formulario-contacto form .control-formulario textarea {
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  width: 230px;
+  background-color: #b7d0ec; /* color fondo */
+  padding: 10px;
+}
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #000000; /* color borde */
+  outline: none;
+}
+
+.formulario-contacto form .control-formulario label {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+  display: block; /* etiqueta sobre el input */
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+
+.formulario-contacto form button {
+  background-color: #5f678f; /* color fondo */
+  margin-top: 15px;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgb(240, 235, 235); /*sombra */
+  transition: background-color 0.3s;
+}
+.formulario-contacto form button:hover {
+  color: rgb(0, 255, 85);
+}
